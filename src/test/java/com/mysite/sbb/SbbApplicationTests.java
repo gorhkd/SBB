@@ -2,6 +2,7 @@ package com.mysite.sbb;
 
 import com.mysite.sbb.answer.AnswerRepository;
 import com.mysite.sbb.question.QuestionRepository;
+import com.mysite.sbb.question.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -12,7 +13,11 @@ class SbbApplicationTests {
 	private QuestionRepository questionRepository;
 
 	@Autowired
+	private QuestionService questionService;
+
+	@Autowired
 	private AnswerRepository answerRepository;
+
 
 //	@Test
 //	void testJpa1() {
@@ -119,5 +124,16 @@ class SbbApplicationTests {
 //
 //		assertEquals(1, answerList.size());
 //		assertEquals("네 자동으로 생성됩니다.", answerList.get(0).getContent());
+//	}
+
+//	@Test
+//	void testJpa12() {
+//		for (int i = 1; i <= 300; i++){
+//			Question q = new Question();
+//			String subject = String.format("테스트 페이지입니다:[%03d]", i);
+//			String content = ("내용무");
+//			this.questionService.create(subject, content);
+//
+//		}
 //	}
 }
